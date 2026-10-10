@@ -24,7 +24,7 @@ Ripple's installer is signed for updates, but it is not yet code signed with a p
 
 - **Replay buffer.** Keeps the last stretch of gameplay or desktop in the background. Save it with a hotkey. Plenty of extras on top, like auto-starting the buffer.
 - **Capture a display or a window.**
-- **Hardware encoding** with NVIDIA NVENC, AMD AMF, or Intel QSV, with a software x264 fallback.
+- **Hardware encoding** with NVIDIA NVENC, AMD AMF, or Intel QSV, with a software fallback (may not be default).
   - **Please note:** I don't own an NVIDIA GPU, so I have no way of testing NVENC. As a solo dev, I can only confirm 3 of the 4 encoders. Thank you for understanding!
 - **Audio.** Desktop audio and microphone, with separate volume controls and an option for separate tracks. (Separate tracks are still being fixed, coming soon.)
 - **Output formats.** MP4, MKV, or MOV.
