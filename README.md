@@ -44,7 +44,6 @@ Default hotkeys (you can change them in Settings):
 | Action | Default |
 | --- | --- |
 | Save clip | `Ctrl` + `Shift` + `F10` |
-| Add marker | `F9` |
 | Screenshot | `F8` |
 
 ## Requirements
