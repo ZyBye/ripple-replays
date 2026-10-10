@@ -4,6 +4,11 @@ Ripple is a replay buffer for Windows | Win only may plan to expand. It records 
 
 Ripple is free to use. The source code is not public, and this repository only hosts the downloads, release notes, and bug reports.
 
+<p align="center">
+  <a href="assets/ripple-1.png"><img src="assets/ripple-1.png" alt="Clip library" width="410"></a>
+  <a href="assets/ripple-2.png"><img src="assets/ripple-2.png" alt="Capture page" width="410"></a>
+</p>
+
 ## Download
 
 Grab the latest installer from the **[Releases](../../releases/latest)** page and run `Ripple_x.y.z_x64-setup.exe`.
