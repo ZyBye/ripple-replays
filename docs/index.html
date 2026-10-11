@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ripple: replay buffer and clip library for Windows</title>
+<meta name="description" content="Ripple records in the background and saves what just happened when you press a hotkey.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#09090b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ripple: replay buffer and clip library for Windows">
+<meta property="og:description" content="Ripple records in the background and saves what just happened when you press a hotkey.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 28 28'%3E%3Cpath fill='%235e6ad2' d='M16 7C16 7 10.5 14.14 10.5 18.5a5.5 5.5 0 0 0 11 0C21.5 14.14 16 7 16 7Z'/%3E%3Cg fill='none' stroke='%235e6ad2' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8.5 8H6V24H8.5'/%3E%3Cpath d='M23.5 8H26V24H23.5'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#top" aria-label="Ripple home">
+      <svg viewBox="2 2 28 28" aria-hidden="true"><path class="mark" d="M16 7C16 7 10.5 14.14 10.5 18.5a5.5 5.5 0 0 0 11 0C21.5 14.14 16 7 16 7Z"/><g class="mark-s"><path d="M8.5 8H6V24H8.5"/><path d="M23.5 8H26V24H23.5"/></g></svg>
+      Ripple
+    </a>
+    <div class="links"><a href="releases.html">Releases</a><a href="#download">Download</a></div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-copy">
+      <h1>Clip what just happened.</h1>
+      <p class="lede">Ripple records in the background. Press a hotkey and the last stretch of your game is saved as a clip, ready to trim, compress, and share.</p>
+      <div class="cta">
+        <a class="btn" data-release data-gh="releases/latest">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1v8.6L5 6.6 3.9 7.7 8 11.8l4.1-4.1L11 6.6 8 9.6V1zM2 13h12v1.5H2z"/></svg>
+          Download for Windows
+        </a>
+        <span class="meta" id="meta">Windows 10 or 11, 64-bit</span>
+      </div>
+    </div>
+    <div class="drop" aria-hidden="true">
+      <div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="ring"></div>
+      <svg viewBox="2 2 28 28"><path class="mark" d="M16 7C16 7 10.5 14.14 10.5 18.5a5.5 5.5 0 0 0 11 0C21.5 14.14 16 7 16 7Z"/></svg>
+    </div>
+  </header>
+
+  <div class="buffer" role="img" aria-label="Illustration of a rolling replay buffer: footage records continuously, and the most recent stretch is saved as a clip when you press the hotkey">
+    <div class="bh"><span class="stat"><span class="live"></span>Recording in the background</span><span class="kbd">Ctrl + Shift + F10</span></div>
+    <div class="strip"><div class="track" id="track"></div><div class="clip"><b>your clip</b></div></div>
+    <div class="axis"><span>older</span><span>now</span></div>
+    <div class="toast">Clip saved</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap feat">
+    <h2>Quiet while you play, quick when you need it.</h2>
+    <dl>
+      <div><dt>Runs on your GPU</dt><dd>Encodes with NVIDIA, AMD, or Intel hardware, and falls back to your CPU if there isn't any.</dd></div>
+      <div><dt>Saves without re-encoding</dt><dd>Clips are copied straight into MP4, MKV, or MOV, so they save fast and keep full quality.</dd></div>
+      <div><dt>Memory or disk buffer</dt><dd>Keep the buffer in RAM and skip disk writes entirely, or put it on disk to hold longer clips without using memory.</dd></div>
+      <div><dt>Display or one window</dt><dd>Record a whole screen, or just the game you're playing.</dd></div>
+      <div><dt>Your keys, your lengths</dt><dd>Add your own hotkeys for different clip lengths, and switch between recording setups with profiles.</dd></div>
+      <div><dt>Trim and compress</dt><dd>Cut a clip down in the studio, or shrink it to fit a chat upload limit.</dd></div>
+      <div><dt>Share a link</dt><dd>Upload a clip and copy the link without leaving the app.</dd></div>
+      <div><dt>Lives in the tray</dt><dd>Close the window and the interface shuts down while the recorder keeps going. Start it with Windows if you like.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions</h2>
+    <div class="faq">
+      <details><summary>Is Ripple free?</summary><p>Yes, and there are no paid features.</p></details>
+      <details><summary>Does it send my clips or data anywhere?</summary><p>No accounts and no analytics. Ripple only checks GitHub for updates (you can turn that off), and uploads a clip to Catbox if you choose to share it.</p></details>
+      <details><summary>Where are my clips saved?</summary><p>In Videos\Ripple by default, or any folder you pick in Settings. Uninstalling Ripple leaves your clips alone.</p></details>
+      <details><summary>Which GPUs are supported?</summary><p>NVIDIA, AMD, and Intel hardware encoders, with a CPU fallback. I don't own an NVIDIA card, so I haven't been able to test that path myself. Reports are welcome.</p></details>
+      <details><summary>Something isn't working. What should I do?</summary><p>Open Settings, click Logs, copy them, and paste them into a <a data-gh="issues">GitHub issue</a> along with what you were doing.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="dl" id="download">
+  <section class="wrap get">
+    <div>
+      <h2>Get Ripple</h2>
+      <p class="note">Installs for your account only, with no admin prompt.</p>
+      <details>
+        <summary>Seeing "Windows protected your PC"?</summary>
+        <p>Ripple isn't code-signed yet, so Windows shows this for new downloads. Select More info, then Run anyway.</p>
+      </details>
+    </div>
+    <a class="btn" data-release data-gh="releases/latest">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1v8.6L5 6.6 3.9 7.7 8 11.8l4.1-4.1L11 6.6 8 9.6V1zM2 13h12v1.5H2z"/></svg>
+      Download for Windows
+    </a>
+  </section>
+</div>
+
+<footer><div class="wrap"><span>Made for people who forget to hit record.</span><span class="fl"><a href="releases.html">Releases</a><a data-gh="">GitHub</a><a data-gh="issues">Report a bug</a><a data-gh="blob/HEAD/LICENSE">License</a></span></div></footer>
+
+<script src="js/site.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
