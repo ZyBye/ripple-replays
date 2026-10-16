@@ -2,7 +2,7 @@
 
 Ripple is a replay buffer for Windows | Win only may plan to expand. It records your screen in the background, and when something good happens you press a hotkey to save the last few seconds as a clip. Clips land in a built-in library where you can trim, compress, and share them.
 
-Ripple is free to use. The source code is not public, and this repository only hosts the downloads, release notes, and bug reports.
+Ripple is free to use. The source code is not public, and this repository only hosts the downloads, release notes, and bug reports. It may go open source I'm just testing different things etc, I'm currently working on improving rn It's just a fun project it utilizes gstreamer as the primary pipeline.
 
 <p align="center">
   <a href="assets/ripple-1.png"><img src="assets/ripple-1.png" alt="Clip library" width="410"></a>
