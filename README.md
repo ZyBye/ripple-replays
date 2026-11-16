@@ -25,7 +25,7 @@ Ripple's installer is signed for updates, but it is not yet code signed with a p
 - **Replay buffer.** Keeps the last stretch of gameplay or desktop in the background. Save it with a hotkey. Plenty of extras on top, like auto-starting the buffer.
 - **Capture a display or a window.**
 - **Hardware encoding** with NVIDIA NVENC, AMD AMF, or Intel QSV, with a software fallback (may not be default).
-  - **Please note:** I don't own an NVIDIA GPU, so I have no way of testing NVENC. As a solo dev, I can only confirm 3 of the 4 encoders. Thank you for understanding!
+  - **Please note:** I don't own an NVIDIA GPU, so I have no way of testing NVENC. As a solo dev, I can only confirm 3 of the 4 encoders. Thank you for understanding! (Update, I've briefly tested and confirmed nvidia on a 1650, so it should be good but please report any issues.)
 - **Audio.** Desktop audio and microphone, with separate volume controls and an option for separate tracks. (Separate tracks are still being fixed, coming soon.)
 - **Output formats.** MP4, MKV, or MOV.
 - **Clip library** with thumbnails, renaming, and deleting.
@@ -75,13 +75,16 @@ Ripple has no accounts and does not collect analytics. These are the only networ
 
 ## Reporting a bug
 
-Open an [issue](../../issues) and include:
+Open an [issues](https://github.com/ZyBye/ripple-replays/issues) and include:
 
 - Your Ripple version (shown in Settings)
 - Your Windows version and GPU
 - What you were doing, and what you expected to happen
+- Any error messages, crash details, or context about what you were doing.
+- Include your logs (grab them from the bottom-right paper icon or %APPDATA%\com.ripplereplay.app\logs\ripple.log) and paste them clearly with your issue.
 
-Apologies for the lack of logs; I was a little rushed, but expect them soon! As for NVIDIA users, I’d appreciate your feedback. Because I do not have an NVIDIA GPU, I cannot test it on my own at the moment—though perhaps in the future I may. This was just a project for fun, and I might go open source down the road. I really hope it works well for people, as this is one of the few projects I've taken seriously.
+Update: Logs have been introduced, so please include your logs when you open an issue. You can find them at the bottom right corner as a little paper icon or manually at %APPDATA%\com.ripplereplay.app\logs\ripple.log.
+This was just a project for fun, and I might go open source down the road. I really hope it works well for people, as this is one of the few projects I've taken seriously.
 
 ## License
 
